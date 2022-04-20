@@ -16,7 +16,7 @@ public class StudentService {
 	@Autowired
 	private StudentRepo studentRepo;
 
-	@Cacheable(value = "studentPo" ,key = "targetClass + methodName +#p0")
+	@Cacheable(value = "studentPo" ,key = "#p0")
 	public StudentPo findById(Long id){
 		Optional<StudentPo> result = studentRepo.findById(id);
 		return result.get();

@@ -17,7 +17,7 @@ public class Test {
 	private StudentRepo studentRepo;
 
 
-	@Scheduled(fixedDelay = syncDelay)
+//	@Scheduled(fixedDelay = syncDelay)
 	public void task(){
 		log.info("查询开始");
 		long begin = System.nanoTime();
@@ -25,7 +25,7 @@ public class Test {
 		log.info("查询结束 "+ (System.nanoTime() - begin));
 	}
 
-	@Scheduled(fixedDelay = syncDelay)
+//	@Scheduled(fixedDelay = syncDelay)
 	public void task2(){
 		log.info("查询开始");
 		long begin =System.nanoTime();

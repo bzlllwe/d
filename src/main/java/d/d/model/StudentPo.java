@@ -16,9 +16,10 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name = "student")
-public class StudentPo extends BaseEntity  {
+public class StudentPo extends BaseEntity implements Serializable{
 
-//	private static final long serialVersionUID = 1L;
+	// 不实现序列化的话，redisCacheManager序列化报错
+	private static final long serialVersionUID = 1L;
 
 	@NotEmpty(message = "name不可为空")
 	private String name;

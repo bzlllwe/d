@@ -9,6 +9,18 @@ spring:
       max-file-size: 100MB
       max-request-size: 100MB
 
+  session:
+    store-type: redis
+  redis:
+    database: 6
+    host: jinx
+    port: 6379
+    password: 123456
+    pool:
+      max-active: 10
+      max-idle: 8
+      max-wait: 50
+      min-idle: 5
 
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/d?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&tinyInt1isBit=false&serverTimezone=UTC
