@@ -3,6 +3,11 @@ server:
 
 debug: true
 
+# 日志配置
+logging:
+  level:
+    d.d: debug
+    org.springframework: warn
 spring:
   servlet:
     multipart:
@@ -12,7 +17,7 @@ spring:
   session:
     store-type: redis
   redis:
-    database: 6
+    database: 0
     host: jinx
     port: 6379
     password: 123456
